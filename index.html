@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imagenes/logo.ico" type="image/x-icon">
+    <title>Alura MARK 2.1</title>
+</head>
+
+<body>
+    <header>
+        <h1>Encriptador MARK 2.1</h1>
+    </header>
+    <div class="container">
+        <div class="input-section">
+            <label for="input-text">Texto a encriptar o desencriptar: <a id="dark-mode-btn"><img id="btnimg" src="imagenes/sun.svg" alt=""></a></label>
+            <textarea id="input-text" placeholder="Solo se aceptan minusculas"></textarea>
+        </div>
+        <div class="output-section">
+            <label for="output-text">Resultado:</label>
+            <textarea id="output-text" readonly></textarea>
+            <button id="copy-btn" onclick="btnCopiar">Copiar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <small>&copy; 2023 <b>Adrian Muñoz</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+
+</html>
