@@ -6,7 +6,7 @@
 
 /*Cuerpo de el encriptador*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     background: rgb(238,174,202);
@@ -22,7 +22,6 @@ header {
 }
 
 .container {
-    font-family: monospace;
     max-width: 600px;
     margin: 0 auto 100px;
     padding: 20px;
@@ -45,14 +44,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-.input-section,
-.output-section:active {
-    border: none;
+textarea:focus {
+    outline: none;
 }
 
 label {
     display: block;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 textarea {
@@ -60,7 +59,6 @@ textarea {
     min-height: 100px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
 /*Botones*/
