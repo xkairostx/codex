@@ -46,7 +46,7 @@ function cambiarEstadoEncriptado() {
 }
 
 function esPantallaPequena() {
-    return window.innerWidth < 768; // Definir el umbral del ancho de la pantalla aquí
+    return window.innerWidth < 768;
 }
 
 function ocultarResultado() {
@@ -104,21 +104,21 @@ textArea.addEventListener("input", function () {
     cambiarEstadoEncriptado();
 });
 
-function accionbtn(){
+function accionbtn() {
     const boton = document.querySelector("#copy-btn"); //Seleccionamos el boton
     boton.innerHTML = 'Copiado!'; //agregamos el texto Copiado
 
-    const cambioNombre = setInterval(function(){  //se crea un evento de intervalos 
+    const cambioNombre = setInterval(function () {  //se crea un evento de intervalos 
         boton.innerHTML = "Copiar";  //luego de complido el intervalo se cambio el nombre a copiar
         clearInterval(cambioNombre); //se destruye el intervalo
     }, 1000); //el tiempo de intervalo es de mil milisegundos
 
-    
+
 }
 
 btnCopiar.addEventListener('click', () => {
     const texto = mensaje.value;
-    
+
     navigator.clipboard.writeText(texto)
         .then(() => {
             console.log('Texto copiado');
@@ -136,11 +136,11 @@ darkModeBtn.addEventListener('click', () => {
     body.classList.toggle('dark-background');
     let img = document.querySelector('#btnimg');
 
-    if (img.src.includes('sun.svg')){
+    if (img.src.includes('sun.svg')) {
         img.src = 'imagenes/moon.svg';
-    }else{
+    } else {
         img.src = 'imagenes/sun.svg';
     }
-    
+
 });
 
