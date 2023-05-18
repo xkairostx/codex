@@ -17,8 +17,7 @@ body {
 header {
     padding-top: 30px;
     padding-bottom: 5px;
-    color: white;
-
+    color: black;
 }
 
 .container {
@@ -87,6 +86,10 @@ button:hover {
 .dark-mode {
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,19,41,1) 100%);
+    color: white;
+}
+
+.dark-mode h1 {
     color: white;
 }
 
