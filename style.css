@@ -44,8 +44,10 @@ h1 {
     margin-bottom: 20px;
 }
 
-textarea:focus {
+textarea {
     outline: none;
+    resize: none;
+    overflow: none;
 }
 
 label {
