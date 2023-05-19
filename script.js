@@ -1,7 +1,6 @@
 const btnCopiar = document.querySelector('#copy-btn');
 const textArea = document.querySelector("#input-text");
 const mensaje = document.querySelector("#output-text");
-const resultadoLabel = document.querySelector("label[for='output-text']");
 const darkModeBtn = document.getElementById('dark-mode-btn');
 const body = document.body;
 
@@ -44,59 +43,6 @@ function cambiarEstadoEncriptado() {
         mensaje.value = encriptar(texto);
     }
 }
-
-function esPantallaPequena() {
-    return window.innerWidth < 768;
-}
-
-function ocultarResultado() {
-    mensaje.style.display = 'none';
-    resultadoLabel.style.display = 'none';
-    btnCopiar.style.display = 'none';
-}
-
-function mostrarResultado() {
-    mensaje.style.display = 'block';
-    resultadoLabel.style.display = 'block';
-    btnCopiar.style.display = 'block';
-}
-
-function cambiarEstadoEncriptado() {
-    const texto = textArea.value;
-    if (texto.includes("enter") || texto.includes("imes") || texto.includes("ai") || texto.includes("ober") || texto.includes("ufat")) {
-        mensaje.value = desencriptar(texto);
-    } else {
-        mensaje.value = encriptar(texto);
-    }
-
-    // Mostrar u ocultar la sección de resultado y sus elementos relacionados
-    if (esPantallaPequena()) {
-        if (texto.length > 0) {
-            mostrarResultado();
-        } else {
-            ocultarResultado();
-        }
-    } else {
-        // Mostrar siempre la sección del resultado en pantallas más grandes
-        mensaje.style.display = 'block';
-        resultadoLabel.style.display = 'block';
-        btnCopiar.style.display = 'block';
-    }
-}
-
-// Verificar el tamaño de la pantalla al cargar la página
-if (esPantallaPequena()) {
-    ocultarResultado();
-}
-
-// Verificar el tamaño de la pantalla al redimensionar la ventana
-window.addEventListener('resize', () => {
-    if (esPantallaPequena()) {
-        ocultarResultado();
-    } else {
-        mostrarResultado();
-    }
-});
 
 //Copiar texto
 
